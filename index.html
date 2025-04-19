@@ -1,0 +1,1139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>24 WALLSTREET</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <script>
+        function sendData() {
+            // Get values from input fields
+            const name = document.getElementById("name").value;
+            const email = document.getElementById("email").value;
+            const phone = document.getElementById("phone").value;
+            const message = document.getElementById("message").value;
+
+            // Prepare request data
+            const requestData = {
+                name: name,
+                email: email,
+                phone: phone,
+                message: message
+            };
+
+            // API endpoint (Replace with actual API URL)
+            const apiUrl = "https://p7hjkeqa74.execute-api.eu-north-1.amazonaws.com/prod/contactform";
+
+            // Fetch API with POST request
+            fetch(apiUrl, {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify(requestData)  // Convert object to JSON
+            })
+                .then(response => response.json())  // Convert response to JSON
+                .then(data => {
+                    document.getElementById("response").innerText = JSON.stringify(data, null, 2);
+                })
+                .catch(error => console.error("Error:", error));
+        }
+    </script>
+     <script>
+        function sendData1() {
+            // Get values from input fields
+            const name = document.getElementById("name1").value;
+            const email = document.getElementById("email1").value;
+            const phone = document.getElementById("phone1").value;
+            const message = document.getElementById("message1").value;
+
+            // Prepare request data
+            const requestData = {
+                name: name,
+                email: email,
+                phone: phone,
+                message: message
+            };
+
+            // API endpoint (Replace with actual API URL)
+            const apiUrl = "https://p7hjkeqa74.execute-api.eu-north-1.amazonaws.com/prod/contactform";
+
+            // Fetch API with POST request
+            fetch(apiUrl, {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify(requestData)  // Convert object to JSON
+            })
+                .then(response => response.json())  // Convert response to JSON
+                .then(data => {
+                    document.getElementById("response").innerText = JSON.stringify(data, null, 2);
+                })
+                .catch(error => console.error("Error:", error));
+        }
+    </script>
+    <header>
+        <div class="logo">
+            <img src="img/logo.png" alt="24 WALLSTREET">
+        </div>
+        
+        <div class="hamburger" id="hamburger-menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        
+        <ul class="nav-links" id="nav-menu">
+            <li><a href="#overview">OVERVIEW</a></li>
+            <li><a href="#price">PRICES</a></li>
+            <li><a href="#amenities">AMENITIES</a></li>
+            <li><a href="#gallary">GALLERY</a></li>
+            <li><a href="#virtualtour">VIRTUAL TOUR</a></li>
+            <li><a href="#faq">FAQ</a></li>
+        </ul>
+        
+        <a href="tel:+919223003745" class="contact-btn">
+            <img src="img/icons8-whatsapp.gif" alt="WhatsApp"> +91 9223003745
+        </a>
+    </header>
+
+    <div class="hero">
+        <!-- Hero content would go here -->
+    </div>
+
+    <!-- Popup Form -->
+    <div class="popup-overlay" id="popup-form">
+        <div class="popup-container">
+            <button class="close-btn" id="close-popup">✕</button>
+            <h2>Register here and Avail the Best Offers!!!</h2>
+            
+            <form id="enquiry-form">
+                <div class="form-group">
+                    <input type="text" id="name" placeholder="Your Name*" required>
+                </div>
+                
+                <div class="form-group">
+                    <input type="tel" id="phone" placeholder="Mobile Number*" required>
+                </div>
+                
+                <div class="form-group">
+                    <input type="email" id="email" placeholder="Your Email*" required>
+                </div>
+                <div class="form-group">
+                    <input type="msg" id="message" placeholder="Your Message*" required>
+                </div>
+                <div class="checkbox-group">
+                    <input type="checkbox" id="not-robot" required>
+                    <label for="not-robot">I'm not a robot</label>
+                </div>
+                <button  onclick="sendData()" class="submit-btn">Enquire Now</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- /******************************SECTION 2************************************/ -->
+    <div class="container" id="overview">
+        <!-- First Section - Text Left, Image Right -->
+        <div class="section">
+            <div class="text-content">
+                <h2>A New Era of Business in PCMC</h2>
+                <p>24 Wallstreet redefines the landscape of commercial real estate in PCMC, offering an internationally conceptualized workspace designed to foster innovation and growth. With a striking façade inspired by Dubai's skyline and state-of-the-art infrastructure, this iconic development seamlessly blends luxury with functionality.</p>
+                <p>Its strategic location next to PCMC Corporation ensures unparalleled connectivity, making it the ultimate destination for forward-thinking businesses.</p>
+            </div>
+            <div class="image-content">
+                <img src="img/4.jpeg" alt="24 Wallstreet Building Exterior" class="section-image">
+            </div>
+        </div>
+
+        <!-- Second Section - Image Left, Text Right -->
+        <div class="section reverse">
+            <div class="text-content">
+                <h2>Elevated Workspaces with Global Amenities</h2>
+                <p>Designed for productivity and sophistication, 24 Wallstreet features high-end offices with private terraces, triple-height lobbies, and premium retail spaces. Cutting-edge amenities such as conference rooms, employee lounges, a fully equipped gym, and outdoor seating areas enhance the work-life balance.</p>
+                <p>The thoughtfully planned interiors, with natural lighting and high ceilings, create an inspiring environment that caters to the evolving needs of modern professionals.</p>
+            </div>
+            <div class="image-content">
+                <img src="img/10.jpeg" alt="24 Wallstreet Modern Interior" class="section-image">
+            </div>
+        </div>
+
+        <!-- Third Section - Text Left, Image Right -->
+        <div class="section">
+            <div class="text-content">
+                <h2>The Perfect Fusion of Business & Lifestyle</h2>
+                <p>More than just a workplace, 24 Wallstreet is a landmark that elevates commercial real estate standards. From high-speed elevators and 24/7 security to sustainable features like solar power and rainwater harvesting, every aspect is meticulously crafted for efficiency and sustainability.</p>
+                <p>Whether you're an entrepreneur, a multinational corporation, or a retail brand, this Grade A++ commercial space offers the perfect setting to thrive in an ever-evolving business world.</p>
+            </div>
+            <div class="image-content">
+                <img src="img/3.jpeg" alt="24 Wallstreet Night View" class="section-image">
+            </div>
+        </div>
+    </div>
+    <!-- /****************************THREE SECTION*******************************************/ -->
+   
+    <div class="container" id="price">
+        <h2 class="section-title">Premium Features</h2>
+        
+        <div class="features-container">
+            <!-- Prime Location Card -->
+            <div class="feature-card">
+                <div class="card-title">
+                  <i class="fas fa-map-marked-alt"></i>
+                    <span>Prime Location</span>
+                </div>
+                
+                <div class="feature-item">
+                    <div class="feature-heading">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Strategic Positioning</span>
+                    </div>
+                    <div class="feature-text">
+                        Adjacent to PCMC Corporation in Pune's thriving commercial hub
+                    </div>
+                </div>
+                
+                <div class="feature-item">
+                    <div class="feature-heading">
+                        <i class="fas fa-landmark"></i>
+                        <span>Iconic Architecture</span>
+                    </div>
+                    <div class="feature-text">
+                        Contemporary Dubai-inspired skyline with premium glass façade
+                    </div>
+                </div>
+                
+                <div class="feature-item">
+                    <div class="feature-heading">
+                        <i class="fas fa-car"></i>
+                        <span>Ample Parking</span>
+                    </div>
+                    <div class="feature-text">
+                        1:1000 parking ratio ensuring convenience for all visitors
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Office Features Card -->
+            <div class="feature-card">
+                <div class="card-title">
+                    <i class="fas fa-building"></i>
+                    <!-- <i class="fas fa-door-open"></i> -->
+                    <span>Office Features</span>
+                </div>
+                
+                <div class="feature-item">
+                    <div class="feature-heading">
+                        <i class="fas fa-expand"></i>
+                        <span>Spacious Layouts</span>
+                    </div>
+                    <div class="feature-text">
+                        13ft ceilings with attached toilets for premium comfort
+                    </div>
+                </div>
+                
+                <div class="feature-item">
+                    <div class="feature-heading">
+                        <i class="fas fa-store"></i>
+                        <span>Retail Spaces</span>
+                    </div>
+                    <div class="feature-text">
+                        13ft ceilings in high footfall commercial areas
+                    </div>
+                </div>
+                
+                <div class="feature-item">
+                    <div class="feature-heading">
+                        <i class="fas fa-chart-line"></i>
+                        <span>Strong ROI</span>
+                    </div>
+                    <div class="feature-text">
+                        Expected Entry ROI @7% with excellent appreciation potential
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Premium Amenities Card -->
+            <div class="feature-card">
+                <div class="card-title">
+                    <i class="fas fa-star"></i>
+                    <span>Premium Amenities</span>
+                </div>
+                
+                <div class="feature-item">
+                    <div class="feature-heading">
+                        <i class="fas fa-leaf"></i>
+                        <span>Sustainable Design</span>
+                    </div>
+                    <div class="feature-text">
+                        Solar power, rainwater harvesting & energy-efficient systems
+                    </div>
+                </div>
+                
+                <div class="feature-item">
+                    <div class="feature-heading">
+                        <i class="fas fa-shield-alt"></i>
+                        <span>24/7 Security</span>
+                    </div>
+                    <div class="feature-text">
+                        CCTV surveillance with controlled access points
+                    </div>
+                </div>
+                
+                <div class="feature-item">
+                    <div class="feature-heading">
+                        <i class="fas fa-bolt"></i>
+                        <span>Power Backup</span>
+                    </div>
+                    <div class="feature-text">
+                        100% DG backup for uninterrupted operations
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Information Footer -->
+    <div class="info-footer">
+        <div class="info-container">
+            <div class="info-item">
+                <!-- <i class="fas fa-hands-holding"></i> -->
+                <img src="img/property.png" style="max-width: 64px;  margin-bottom: 10px;">
+                <div class="info-title">Property Type</div>
+                <div class="info-text">Commercial Project</div>
+            </div>
+            
+            <div class="info-item">
+                <img src="img/configration.png" style="max-width: 64px;  margin-bottom: 10px;">
+                <div class="info-title">Configuration</div>
+                <div class="info-text">Office & Showroom</div>
+            </div>
+            
+            <div class="info-item">
+                <img src="img/price.png" style="max-width: 64px;  margin-bottom: 10px;">
+                <div class="info-title">Pricing</div>
+                <div class="info-text">₹ 1.11 Cr* All inclusive</div>
+            </div>
+            
+            <div class="info-item">
+                <img src="img/p.png" style="max-width: 64px; margin-bottom: 10px;">
+                <div class="info-title">Possession</div>
+                <div class="info-text">Coming Soon</div>
+            </div>
+            
+            <div class="info-item">
+                <img src="img/rera.png" style="max-width: 64px;  margin-bottom: 10px;">
+                <div class="info-title">MahaRERA No</div>
+                <div class="info-text">P52100077499</div>
+            </div>
+            
+            <div class="info-item">
+                <img src="img/location.png" style="max-width: 64px;  margin-bottom: 10px;">
+                <div class="info-title">Location</div>
+                <div class="info-text">Pimpri, Pune</div>
+            </div>
+        </div>
+    </div>
+      <!-- Pricing Details Section -->
+      <section class="pricing-section">
+        <h2 class="pricing-heading">Pricing Details</h2>
+        <div class="pricing-cards-wrapper">
+            <div class="pricing-card">
+                <h3 class="space-type">Office Space</h3>
+                <p class="carpet-area">Carpet Area: Starting From 602 SQ.FT</p>
+                <p class="price-tag">Price: ₹ 1.11 Cr* All Inclusive</p>
+                <button class="price-break-btn" onclick="openPopup()" >PRICE BREAK-UP</button>
+            </div>
+            <div class="pricing-card">
+                <h3 class="space-type">Showroom Space</h3>
+                <p class="carpet-area">Carpet Area: Starting From 882 SQ.FT</p>
+                <p class="price-tag">Price: ₹ 6 Cr* All Inclusive</p>
+                <button class="price-break-btn" onclick="openPopup()" >PRICE BREAK-UP</button>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Floor Plan Section -->
+    <section class="floor-section">
+        <h2 class="floor-heading">Floor Plan</h2>
+        <div class="floor-gallery">
+            <!-- Floor Plan 1 -->
+            <div class="floor-card" >
+                <div class="floor-image">
+                     <img src="img/f.jpeg">
+                </div>
+                <div class="floor-label">Floor Plan</div>
+            </div>
+            
+            <!-- Floor Plan 2 -->
+            <div class="floor-card">
+                <div class="floor-image">
+                    <img src="img/f2.jpeg">
+                </div>
+                <div class="floor-label">Floor Plan</div>
+            </div>
+            
+            <!-- Floor Plan 3 -->
+            <div class="floor-card">
+                <div class="floor-image">
+                    <img src="img/f3.jpeg">
+                </div>
+                <div class="floor-label">Floor Plan</div>
+            </div>
+        </div>
+    </section>
+    <section class="amenities-section" id="amenities">
+        <h2 class="amenities-title">World-Class Amenities</h2>
+        <div class="dot"></div>
+        
+        <div class="amenities-list">
+          <div class="amenity-item">
+            <i class="fas fa-building icon"></i>
+            Triple-height Lobby
+          </div>
+          <div class="amenity-item">
+            <i class="fas fa-window-maximize icon"></i>
+            Double-glazed Glass
+          </div>
+          <div class="amenity-item">
+            <i class="fas fa-leaf icon"></i>
+            Sustainable Environment
+          </div>
+          <div class="amenity-item">
+            <i class="fas fa-solar-panel icon"></i>
+            Solar Power
+          </div>
+          <div class="amenity-item">
+            <i class="fas fa-tint icon"></i>
+            Rainwater System
+          </div>
+          <div class="amenity-item">
+            <i class="fas fa-shield-alt icon"></i>
+            Security & CCTV
+          </div>
+          
+          <div class="amenity-item">
+            <i class="fas fa-elevator icon"></i>
+            High-speed Elevators
+          </div>
+          <div class="amenity-item">
+            <i class="fas fa-plug icon"></i>
+            Smart Charging
+          </div>
+          <div class="amenity-item">
+            <i class="fas fa-user-tie icon"></i>
+            Managed Receptions
+          </div>
+          <div class="amenity-item">
+            <i class="fas fa-coffee icon"></i>
+            Café & Lounge
+          </div>
+          <div class="amenity-item">
+            <i class="fas fa-dumbbell icon"></i>
+            Gym & Seating
+          </div>
+          <div class="amenity-item">
+            <i class="fas fa-baby icon"></i>
+            Crèche Facility
+          </div>
+          
+          <div class="amenity-item">
+            <i class="fas fa-bolt icon"></i>
+            Generator Backup
+          </div>
+          <div class="amenity-item">
+            <i class="fas fa-comments icon"></i>
+            Meeting Pods
+          </div>
+          <div class="amenity-item">
+            <i class="fas fa-tree icon"></i>
+            Private Terraces
+          </div>
+          <div class="amenity-item">
+            <i class="fas fa-toilet icon"></i>
+            Attached Toilets
+          </div>
+        </div>
+      </section>
+
+   <!----- /**************************************AMENITIES*************************************/ -->
+
+
+
+   <div class="gallery-container" id="gallery">
+    <h2 class="gallery-title">Gallery</h2>
+    
+    <div class="slideshow-container">
+      <div class="slides" id="slides">
+        <!-- Images will be inserted here via JavaScript -->
+      </div>
+      
+      <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
+      <a class="next" onclick="changeSlide(1)">&#10095;</a>
+    </div>
+    
+    <div class="thumbnail-container" id="thumbnails">
+      <!-- Thumbnails will be inserted here via JavaScript -->
+    </div>
+  </div>
+<!-- /**********************************LOCATION**********************************************************/ -->
+
+  <section class="project-section">
+    <h2 class="section-title">Project Video & Location</h2>
+    
+    <div class="content-container">
+      <div class="video-container">
+        <div class="video-wrapper">
+          <video id="project-video" poster="video-thumbnail.jpg">
+            <source src="img/video.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+          
+          <div class="video-controls">
+            <button class="play-btn" id="play-btn">▶</button>
+            <span class="time-display" id="time-display">0:00 / 2:50</span>
+            <div class="progress-bar" id="progress-bar">
+              <div class="progress-filled" id="progress-filled"></div>
+            </div>
+            <button class="volume-btn" id="volume-btn">🔊</button>
+            <button class="fullscreen-btn" id="fullscreen-btn">⛶</button>
+          </div>
+        </div>
+      </div>
+      
+      <div class="location-container">
+        <img src="img/map.jpeg" alt="Project Location Map" class="location-map">
+      </div>
+    </div>
+  </section>
+  <!-- /******************************************************************************************/ -->
+  <div class="containerr">
+    <div class="section-headerr">
+        <h2 class="section-titlee">Strategic Location Advantage</h2>
+        <p class="section-subtitlee">Positioned at the heart of Pune's most vibrant commercial hub, 24 Wallstreet is a beacon of progress</p>
+    </div>
+    
+    <div class="cards-containerr">
+        <!-- Government & Infrastructure Card -->
+        <div class="carda">
+            <div class="card-headerr">
+                <div class="iconn">
+                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 3L1 9V11H23V9L12 3ZM5 11V19H3V21H21V19H19V11H5ZM7 13H9V19H7V13ZM11 13H13V19H11V13ZM15 13H17V19H15V13Z"/>
+                    </svg>
+                </div>
+                <h3 class="card-titlee">Government & Infrastructure</h3>
+            </div>
+            <ul class="location-list">
+                <li class="location-item">
+                    <span class="location-name">PCMC Corporation</span>
+                    <span class="location-distance">0.1 KM</span>
+                </li>
+                <li class="location-item">
+                    <span class="location-name">Civil & Criminal Court</span>
+                    <span class="location-distance">2.7 KM</span>
+                </li>
+                <li class="location-item">
+                    <span class="location-name">ESIC Office</span>
+                    <span class="location-distance">3 KM</span>
+                </li>
+                <li class="location-item">
+                    <span class="location-name">Collector Office PCMC</span>
+                    <span class="location-distance">6.1 KM</span>
+                </li>
+            </ul>
+        </div>
+        
+        <!-- Manufacturing & IT Hubs Card -->
+        <div class="carda">
+            <div class="card-headerr">
+                <div class="iconn">
+                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M22 21H2V11H7V19H9V15H15V19H17V13H22V21ZM7 3H17V6H7V3ZM17 8H7V9H17V8Z"/>
+                    </svg>
+                </div>
+                <h3 class="card-titlee">Manufacturing & IT Hubs</h3>
+            </div>
+            <ul class="location-list">
+                <li class="location-item">
+                    <span class="location-name">Finolex Cables Ltd</span>
+                    <span class="location-distance">1.6 KM</span>
+                </li>
+                <li class="location-item">
+                    <span class="location-name">Danfoss Systems Ltd</span>
+                    <span class="location-distance">1.8 KM</span>
+                </li>
+                <li class="location-item">
+                    <span class="location-name">Tata Motors Pvt Ltd</span>
+                    <span class="location-distance">4.8 KM</span>
+                </li>
+                <li class="location-item">
+                    <span class="location-name">Hinjewadi IT Park</span>
+                    <span class="location-distance">12 KM</span>
+                </li>
+            </ul>
+        </div>
+        
+        <!-- Transport & Key Locations Card -->
+        <div class="carda">
+            <div class="card-headerr">
+                <div class="iconn">
+                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+                    </svg>
+                </div>
+                <h3 class="card-titlee">Transport & Key Locations</h3>
+            </div>
+            <ul class="location-list">
+                <li class="location-item">
+                    <span class="location-name">Metro Station</span>
+                    <span class="location-distance">1 KM</span>
+                </li>
+                <li class="location-item">
+                    <span class="location-name">Pimpri Rly Station</span>
+                    <span class="location-distance">1.7 KM</span>
+                </li>
+                <li class="location-item">
+                    <span class="location-name">Auto Cluster Exhibition</span>
+                    <span class="location-distance">2.5 KM</span>
+                </li>
+                <li class="location-item">
+                    <span class="location-name">Pune Airport</span>
+                    <span class="location-distance">18 KM</span>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<!-- /************************************************************************************/ -->
+<div class="virtual-tour-container" id="virtualtour">
+    <div class="banner-image" style="background-image: url('img/virtual.jpeg')"></div>
+    <div class="overlay">
+        <div class="tour-text">
+            <p class="location-text">24 WALLSTREET AT PIMPRI, PUNE</p>
+            <h2 class="title-text">Virtual Tour</h2>
+        </div>
+        <div class="play-button" id="tourPlayButton">
+            <div class="play-icon"></div>
+        </div>
+    </div>
+</div>
+<!-- /**************************************************************************/ -->
+
+
+<div class="about-container">
+    <div class="logo-containerr">
+        <img src="img/developer.jpeg" class="logoo" style="max-width: 350px;margin-bottom: 20px; margin-top:30px">
+          
+    </div>
+    
+    <h2 class="about-title">About</h2>
+    
+    <div class="about-content">
+        <p class="about-text">
+            The developer of 24 Wallstreet is renowned for crafting premium commercial and residential spaces that redefine modern architecture and functionality. With a commitment to innovation, quality, and customer satisfaction, they have consistently delivered landmark projects that blend contemporary design with world-class amenities.
+        </p>
+        
+        <p class="about-text">
+            Backed by years of expertise and a forward-thinking approach, the developer focuses on creating sustainable, high-performance spaces that cater to evolving business and lifestyle needs. Their meticulous attention to detail, superior craftsmanship, and strategic project locations make them a trusted name in the real estate industry.
+        </p>
+    </div>
+</div>
+<!-- /*****************************************************************************************/ -->
+<div class="faq-container" id="faq">
+    <h2 class="faq-title">24 Wallstreet - Frequently Asked Questions (FAQs)</h2>
+    
+    <div class="faq-grid">
+        <!-- Left Column -->
+        <div class="faq-column">
+            <div class="faq-item">
+                <div class="faq-question">
+                    Where is 24 Wallstreet located?
+                    <span class="faq-toggle">+</span>
+                </div>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        24 Wallstreet is strategically located next to PCMC Corporation, offering excellent connectivity to major business hubs and key locations in Pune.
+                    </div>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">
+                    What types of spaces are available at 24 Wallstreet?
+                    <span class="faq-toggle">+</span>
+                </div>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        24 Wallstreet offers premium commercial spaces including office spaces of various sizes, retail spaces, and amenity areas designed for modern businesses.
+                    </div>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">
+                    What are the key amenities available in 24 Wallstreet?
+                    <span class="faq-toggle">+</span>
+                </div>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        24 Wallstreet features premium amenities including high-speed elevators, 24/7 security, dedicated parking, power backup, central air conditioning, and modern meeting facilities.
+                    </div>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">
+                    Is there parking available in 24 Wallstreet?
+                    <span class="faq-toggle">+</span>
+                </div>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        Yes, 24 Wallstreet provides ample parking spaces for both tenants and visitors with dedicated basement parking areas.
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Right Column -->
+        <div class="faq-column">
+            <div class="faq-item">
+                <div class="faq-question">
+                    What makes 24 Wallstreet a unique commercial space?
+                    <span class="faq-toggle">+</span>
+                </div>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        24 Wallstreet stands out with its premium design, strategic location, sustainable features, and flexible spaces that cater to modern business needs.
+                    </div>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">
+                    Are the office spaces customizable?
+                    <span class="faq-toggle">+</span>
+                </div>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        Yes, office spaces at 24 Wallstreet are designed to be highly customizable, allowing businesses to create layouts that match their specific requirements.
+                    </div>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">
+                    What sustainability features does the project include?
+                    <span class="faq-toggle">+</span>
+                </div>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        24 Wallstreet incorporates various sustainability features including energy-efficient systems, water conservation measures, waste management, and green building materials.
+                    </div>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">
+                    How can I book a space in 24 Wallstreet?
+                    <span class="faq-toggle">+</span>
+                </div>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        To book a space at 24 Wallstreet, you can contact our sales team through the website's contact form, call our office directly, or schedule a site visit for personalized assistance.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- /******************************************************************************************/ -->
+<div class="contact-section">
+    <div class="stars">★ ★ ★ ★ ★</div>
+    <p class="contact-text">TO OBTAIN INFORMATION ON COSTING, PRICE BREAKDOWN, SITE PLAN, FLOOR PLAN, AND OTHER DETAILS, PLEASE CONTACT US FOR COMPREHENSIVE ASSISTANCE.</p>
+    <a href="#" class="download-link">Download Brochure</a>
+    
+    <form class="contact-form">
+        <input type="text" class="form-input" id="name1" placeholder="Your Name*" required>
+        <input type="tel" class="form-input" id="phone1" placeholder="Mobile Number*" required>
+        <input type="email" class="form-input" id="email1" placeholder="Your Email*" required>
+        <input type="msg" class="form-input" id="message1" placeholder="Your Message*" required>
+        <button  onclick="sendData1()" type="submit" class="submit-btn">Enquire Now</button>
+    </form>
+</div>
+
+<div class="footer-section">
+    <img class="qr-code" src="img/qr.png" alt="QR Code">
+    
+    <p class="project-info">Project Maha RERA : P52100077499</p>
+    <p>(<a href="img/rera.png" class="rera-link">https://maharera.maharashtra.gov.in/</a>)</p>
+    
+    <p class="disclaimer">Disclaimer: The content on this website is for informational purposes only and does not constitute an offer for any services. Prices and property availability are subject to change without notice. The images on this site are for representation purposes and may not reflect the actual property. This is the official site of our authorized marketing partner. Your data may be shared with RERA-registered partners for further processing, and we may send updates to the registered mobile number or email. All rights reserved.</p>
+    
+    <div class="footer-links">
+        <a href="#">Privacy Policy</a>
+        <span class="divider">|</span>
+        <a href="#">Terms & Conditions</a>
+    </div>
+</div>
+<!-- /***********************************************************************/ -->
+<div class="mobile-footer">
+    <a href="tel:+1234567890" class="mobile-btn call-now">
+        <span class="btn-icon">📞</span>
+        Call Now
+    </a>
+    <a href="#enquiry-form" class="mobile-btn enquire">
+        <span class="btn-icon">✉️</span>
+        Enquire
+    </a>
+    <a href="https://wa.me/1234567890" class="mobile-btn whatsapp">
+        <span class="btn-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
+                <path d="M17.6 6.32A8.45 8.45 0 0 0 12.14 4C7.42 4 3.55 7.87 3.55 12.59c0 1.52.4 3 1.16 4.3L3.5 21l4.23-1.11c1.27.69 2.7 1.06 4.15 1.06h.04c4.7 0 8.54-3.84 8.54-8.56 0-2.3-.89-4.45-2.49-6.07zm-5.46 13.15h-.03a7.06 7.06 0 0 1-3.58-.98l-.25-.15-2.63.7.7-2.57-.17-.26a7.05 7.05 0 0 1-1.06-3.71c0-3.92 3.2-7.11 7.14-7.11a7.1 7.1 0 0 1 7.12 7.12c0 3.94-3.2 7.14-7.14 7.14zm3.9-5.33c-.22-.12-1.28-.63-1.48-.7-.2-.08-.34-.12-.49.12-.14.23-.55.7-.67.84-.12.15-.25.16-.47.05a5.87 5.87 0 0 1-1.74-1.07 6.61 6.61 0 0 1-1.2-1.5c-.12-.22-.01-.34.1-.45.1-.1.21-.25.32-.38.1-.12.14-.21.21-.36.07-.14.04-.27-.02-.38-.06-.1-.48-1.17-.66-1.6-.18-.42-.36-.37-.49-.37-.13 0-.27-.01-.42-.01s-.38.05-.58.27c-.2.21-.76.74-.76 1.8s.77 2.1.88 2.24c.1.15 1.45 2.2 3.5 3.08.49.21.87.34 1.17.43.5.16.94.13 1.3.08.39-.06 1.2-.5 1.38-.97.16-.48.16-.88.12-.97-.05-.09-.19-.14-.4-.25z"/>
+            </svg>
+        </span>
+        WhatsApp
+    </a>
+    
+<script>
+    // Add event listeners to FAQ questions
+    document.querySelectorAll('.faq-question').forEach(question => {
+        question.addEventListener('click', () => {
+            const faqItem = question.parentElement;
+            const toggleBtn = question.querySelector('.faq-toggle');
+            
+            // Close all other FAQ items
+            document.querySelectorAll('.faq-item').forEach(item => {
+                if (item !== faqItem && item.classList.contains('active')) {
+                    item.classList.remove('active');
+                    item.querySelector('.faq-toggle').textContent = '+';
+                }
+            });
+            
+            // Toggle current FAQ item
+            faqItem.classList.toggle('active');
+            
+            // Change toggle symbol
+            if (faqItem.classList.contains('active')) {
+                toggleBtn.textContent = '−';
+            } else {
+                toggleBtn.textContent = '+';
+            }
+        });
+    });
+</script>
+<script>
+    // Add event listener to the play button
+    document.getElementById('tourPlayButton').addEventListener('click', function() {
+        // This will trigger your existing popup
+        // Replace the line below with the code that opens your popup
+        console.log('Open your existing popup here');
+        
+        // If you have a function to open your popup, call it here
+        // Example: openVirtualTourPopup();
+        
+        // If you're using a modal library like Bootstrap, you might use:
+        // $('#yourExistingPopup').modal('show');
+    });
+</script>
+  <script>
+    // Video player functionality
+    const video = document.getElementById('project-video');
+    const playBtn = document.getElementById('play-btn');
+    const timeDisplay = document.getElementById('time-display');
+    const progressBar = document.getElementById('progress-bar');
+    const progressFilled = document.getElementById('progress-filled');
+    const volumeBtn = document.getElementById('volume-btn');
+    const fullscreenBtn = document.getElementById('fullscreen-btn');
+
+    // Play/Pause functionality
+    playBtn.addEventListener('click', togglePlay);
+    video.addEventListener('click', togglePlay);
+
+    function togglePlay() {
+      if (video.paused) {
+        video.play();
+        playBtn.textContent = '❚❚';
+      } else {
+        video.pause();
+        playBtn.textContent = '▶';
+      }
+    }
+
+    // Update progress bar
+    video.addEventListener('timeupdate', () => {
+      const percent = (video.currentTime / video.duration) * 100;
+      progressFilled.style.width = `${percent}%`;
+      
+      // Format time display
+      const currentMinutes = Math.floor(video.currentTime / 60);
+      const currentSeconds = Math.floor(video.currentTime % 60);
+      const durationMinutes = Math.floor(video.duration / 60);
+      const durationSeconds = Math.floor(video.duration % 60);
+      
+      const formattedTime = `${currentMinutes}:${currentSeconds < 10 ? '0' : ''}${currentSeconds} / ${durationMinutes}:${durationSeconds < 10 ? '0' : ''}${durationSeconds}`;
+      timeDisplay.textContent = formattedTime;
+    });
+
+    // Click on progress bar to seek
+    progressBar.addEventListener('click', (e) => {
+      const scrubTime = (e.offsetX / progressBar.offsetWidth) * video.duration;
+      video.currentTime = scrubTime;
+    });
+
+    // Volume control
+    volumeBtn.addEventListener('click', () => {
+      video.muted = !video.muted;
+      volumeBtn.textContent = video.muted ? '🔇' : '🔊';
+    });
+
+    // Fullscreen functionality
+    fullscreenBtn.addEventListener('click', () => {
+      if (video.requestFullscreen) {
+        video.requestFullscreen();
+      } else if (video.mozRequestFullScreen) {
+        video.mozRequestFullScreen();
+      } else if (video.webkitRequestFullscreen) {
+        video.webkitRequestFullscreen();
+      } else if (video.msRequestFullscreen) {
+        video.msRequestFullscreen();
+      }
+    });
+  </script>
+  <script>
+     // Array of image paths - replace with your actual image paths
+ const images = [
+    'img/1.jpeg',
+    'img/2.jpeg',
+    'img/3.jpeg',
+    'img/4.jpeg',
+    'img/5.jpeg',
+    'img/6.jpeg',
+    'img/7.jpeg',
+    'img/8.jpeg',
+    'img/9.jpeg',
+    'img/10.jpeg',
+    'img/11.jpeg'
+  ];
+
+  let currentSlide = 0;
+  const slidesContainer = document.getElementById('slides');
+  const thumbnailsContainer = document.getElementById('thumbnails');
+
+  // Initialize gallery
+  function initGallery() {
+    // Populate slides
+    images.forEach((img, index) => {
+      const slide = document.createElement('div');
+      slide.className = 'slide';
+      slide.innerHTML = `<img src="${img}" alt="Gallery image ${index + 1}">`;
+      slidesContainer.appendChild(slide);
+
+      // Create thumbnails
+      const thumbnail = document.createElement('div');
+      thumbnail.className = 'thumbnail';
+      thumbnail.innerHTML = `<img src="${img}" alt="Thumbnail ${index + 1}">`;
+      thumbnail.addEventListener('click', () => goToSlide(index));
+      thumbnailsContainer.appendChild(thumbnail);
+    });
+
+    // Set first slide as active
+    updateActiveState();
+  }
+
+  // Go to a specific slide
+  function goToSlide(n) {
+    currentSlide = n;
+    slidesContainer.style.transform = `translateX(-${currentSlide * 100}%)`;
+    updateActiveState();
+  }
+
+  // Change slide by a given offset
+  function changeSlide(offset) {
+    currentSlide = (currentSlide + offset + images.length) % images.length;
+    slidesContainer.style.transform = `translateX(-${currentSlide * 100}%)`;
+    updateActiveState();
+  }
+
+  // Update the active state of thumbnails
+  function updateActiveState() {
+    const thumbnails = document.querySelectorAll('.thumbnail');
+    thumbnails.forEach((thumb, index) => {
+      if (index === currentSlide) {
+        thumb.classList.add('active');
+      } else {
+        thumb.classList.remove('active');
+      }
+    });
+  }
+
+  // Auto rotate slides every 4 seconds
+  let slideInterval = setInterval(() => {
+    changeSlide(1);
+  }, 4000);
+
+  // Pause rotation when hovering over the slideshow
+  document.querySelector('.slideshow-container').addEventListener('mouseenter', () => {
+    clearInterval(slideInterval);
+  });
+
+  // Resume rotation when mouse leaves the slideshow
+  document.querySelector('.slideshow-container').addEventListener('mouseleave', () => {
+    slideInterval = setInterval(() => {
+      changeSlide(1);
+    }, 4000);
+  });
+
+  // Initialize the gallery on page load
+  window.onload = initGallery;
+  </script>
+
+<script>
+    // Hamburger menu functionality
+    const hamburger = document.getElementById('hamburger-menu');
+    const navMenu = document.getElementById('nav-menu');
+    
+    hamburger.addEventListener('click', () => {
+        hamburger.classList.toggle('active');
+        navMenu.classList.toggle('active');
+    });
+    
+    // Close mobile menu when a link is clicked
+    document.querySelectorAll('.nav-links a').forEach(link => {
+        link.addEventListener('click', () => {
+            hamburger.classList.remove('active');
+            navMenu.classList.remove('active');
+        });
+    });
+    
+    // Popup functionality
+    const popup = document.getElementById('popup-form');
+    const closeBtn = document.getElementById('close-popup');
+    
+    // Show popup after 5 seconds
+    setTimeout(() => {
+        popup.style.display = 'flex';
+    }, 5000);
+    
+    // Close popup when X is clicked
+    closeBtn.addEventListener('click', () => {
+        popup.style.display = 'none';
+    });
+    
+    // Close popup when clicking outside
+    popup.addEventListener('click', (e) => {
+        if (e.target === popup) {
+            popup.style.display = 'none';
+        }
+    });
+    
+    // Form submission
+    const form = document.getElementById('enquiry-form');
+    form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        alert('Form submitted successfully!');
+        const selectedFloorPlan = window.selectedFloorPlanData;
+        popup.style.display = 'none';
+        if (selectedFloorPlan) {
+        showFloorPlanImage(selectedFloorPlan);
+    }
+    
+    // Reset the form
+    form.reset();
+    
+    // Alert (you might want to replace this with a more user-friendly notification)
+    alert('Form submitted successfully!');
+});
+
+// FLOOR PLAN FUNCTIONALITY
+// Variable to store the clicked floor plan's image source/data
+window.selectedFloorPlanData = null;
+
+// Get all floor plan cards based on your HTML structure
+const floorPlanCards = document.querySelectorAll('.floor-card');
+
+// Add click event listeners to all floor plan cards
+floorPlanCards.forEach((card, index) => {
+    card.addEventListener('click', (event) => {
+        // Get the image source from the card
+        const floorPlanImage = card.querySelector('.floor-image img').src;
+        
+        // Store the selected floor plan data for later use
+        window.selectedFloorPlanData = {
+            src: floorPlanImage,
+            index: index
+        };
+        
+        // Show the popup
+        popup.style.display = 'flex';
+    });
+});
+
+// Function to display the selected floor plan image
+function showFloorPlanImage(floorPlanData) {
+    // Check if a floor plan modal already exists and remove it
+    const existingModal = document.querySelector('.floor-plan-modal');
+    if (existingModal) {
+        existingModal.remove();
+    }
+    
+    // Create a new modal to display the floor plan image
+    const imageModal = document.createElement('div');
+    imageModal.className = 'floor-plan-modal';
+    
+    imageModal.innerHTML = `
+        <div class="floor-plan-modal-content">
+            <button class="close-image-btn">&times;</button>
+            <h3>Floor Plan ${floorPlanData.index + 1}</h3>
+            <div class="floor-plan-image-container">
+                <img src="${floorPlanData.src}" alt="Floor Plan" class="full-size-floor-plan">
+            </div>
+        </div>
+    `;
+    
+    // Add to body
+    document.body.appendChild(imageModal);
+    
+    // Show the modal
+    setTimeout(() => {
+        imageModal.style.display = 'flex';
+    }, 100);
+    
+    // Add close button functionality
+    const closeImageBtn = imageModal.querySelector('.close-image-btn');
+    closeImageBtn.addEventListener('click', () => {
+        imageModal.remove();
+    });
+    
+    // Close on click outside
+    imageModal.addEventListener('click', (event) => {
+        if (event.target === imageModal) {
+            imageModal.remove();
+        }
+    });
+}
+
+</script> 
+
+<script>
+    function openPopup() {
+        document.getElementById("popup-form").style.display = "flex";
+    }
+
+    function closePopup() {
+        document.getElementById("popup-form").style.display = "none";
+    }
+
+    // Optional: prevent form submission for demo
+    document.getElementById("enquiry-form").addEventListener("submit", function(e) {
+        e.preventDefault();
+        alert("Form submitted!");
+        closePopup();
+    });
+</script>
+
+</body>
+</html>
